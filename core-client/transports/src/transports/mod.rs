@@ -12,6 +12,8 @@ pub mod http;
 pub mod local;
 #[cfg(feature = "ws")]
 pub mod ws;
+#[cfg(all(unix, feature = "uds"))]
+pub mod uds;
 
 pub use duplex::duplex;
 
